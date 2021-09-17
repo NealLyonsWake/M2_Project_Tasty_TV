@@ -1,10 +1,10 @@
 import "./styles.css";
+import TopScreen from "./TopScreen";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>TastyTV Module 2 Project</h1>
-      <h2>Wow, such empty!</h2>
+      <TopScreen />
     </div>
   );
 }
