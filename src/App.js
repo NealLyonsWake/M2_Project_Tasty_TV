@@ -1,5 +1,5 @@
 import "./styles.css";
-import TopScreen from "./TopScreen";
+import TopScreen from "../src/components/TopScreen";
 
 export default function App() {
   return (

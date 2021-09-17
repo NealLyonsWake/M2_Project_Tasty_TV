@@ -1,3 +1,4 @@
+import "./WatchListStyle.css";
 import React from "react";
 import WatchCard from "./WatchCard";
 
@@ -16,25 +17,27 @@ function WatchList(props) {
     if (watchCards.length < 1 && watchCards.banner === undefined) {
       return (
         <div>
-          <h1>Empty</h1>
+          <h1 className="empty">Oh no, it's Empty!</h1>
         </div>
       );
     } else {
       return (
         <div>
-          <button onClick={removeAll}>Remove All</button>
-          <button onClick={removeWatched}>Remove Watched</button>
+          <button className="removeButton" onClick={removeAll}>
+            Remove All
+          </button>
+          <button className="removeButton" onClick={removeWatched}>
+            Remove Watched
+          </button>
         </div>
       );
     }
   }
 
   return (
-    <div>
-      <h2>Watch List</h2>
-
+    <div className="watchListContainer">
       {checkList()}
-      <div>
+      <div className="cardContainer">
         {watchCards.map((mov, index) => {
           return (
             <WatchCard

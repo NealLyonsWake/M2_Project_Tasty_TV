@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import Logo from "../img/Logo.png";
+import "./TopScreenStyle.css";
+import React, { useState } from "react";
 import RecommendedList from "./RecommendedList";
-
 import WatchList from "./WatchList";
 
 function TopScreen() {
@@ -76,13 +77,29 @@ function TopScreen() {
 
   return (
     <div>
-      <h1>TastyTV</h1>
-      <button onClick={handleHeading} value="Recommended for You">
-        Home
-      </button>
-      <button onClick={handleHeading} value="Watch List">
-        Watch List
-      </button>
+      <header>
+        <div>
+          <img className="logo" src={Logo} alt="Tasty TV logo" />
+        </div>
+        <nav>
+          <button
+            className="navButton"
+            onClick={handleHeading}
+            value="Recommended for You"
+          >
+            Home
+          </button>
+          <button
+            className="navButton"
+            onClick={handleHeading}
+            value="Watch List"
+          >
+            Watch List
+          </button>
+        </nav>
+        <h2>{heading}</h2>
+      </header>
+
       {heading === "Recommended for You" ? (
         <RecommendedList addMov={onAdd} />
       ) : (

@@ -1,4 +1,5 @@
 import React from "react";
+import "./RecommendedMovStyle.css";
 
 function RecommendedMov(props) {
   const id = props.id;
@@ -7,16 +8,19 @@ function RecommendedMov(props) {
   const watched = props.watched;
 
   function handleClickAddMov() {
+    alert(`Wow, you added the movie ${title} to your watch list!`);
     props.onAdd(id, title, banner, watched);
     props.onRemove(id);
   }
 
   if (props.banner !== undefined) {
     return (
-      <div>
+      <div className="movCard">
         <img src={banner} alt={`Banner for the movie, ${title}`} />
-        <button onClick={handleClickAddMov}>+</button>
-        <h2>{title}</h2>
+        <button className="addButton" onClick={handleClickAddMov}>
+          Add to Watch List
+        </button>
+        <h4 className="title">{title}</h4>
       </div>
     );
   } else {

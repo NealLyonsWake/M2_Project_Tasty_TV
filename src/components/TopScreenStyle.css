@@ -1,0 +1,27 @@
+header {
+  position: sticky;
+  top: 0px;
+
+  background-color: rgba(10, 17, 23);
+  text-align: center;
+}
+
+.logo {
+  width: 15%;
+  height: auto;
+  min-width: 160px;
+}
+
+nav {
+  background-color: #0c1727ff;
+}
+
+.navButton {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font: 18px "Open Sans", "Segoe UI", "Tahoma";
+  color: white;
+  width: 110px;
+  margin: 15px 20px;
+}

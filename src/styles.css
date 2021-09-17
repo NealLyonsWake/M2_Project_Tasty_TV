@@ -1,4 +1,53 @@
-.App {
+body {
+  margin: 0;
+  background-color: rgba(10, 17, 23);
+  font: 18px "Open Sans", "Segoe UI", "Tahoma";
+  color: white;
+}
+
+.header {
+  text-align: center;
+  background-color: rgba(10, 17, 23);
+  position: sticky;
+  top: 160px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #e004e0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #eb81eb;
+}
+
+/* .App {
   font-family: sans-serif;
   text-align: center;
+} */
+
+/* background-color: rgba(10, 17, 23);
 }
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.609);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: white;
+}
+
+.on {
+  text-decoration: underline 2px;
+  color: white;
+}
+
+h1 {
+  color: #ff00ff;
+}
+
+header {
+  background-color: #0c1727ff; */

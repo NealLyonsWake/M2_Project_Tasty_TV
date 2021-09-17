@@ -1,4 +1,5 @@
 /* eslint-disable */
+import "./RecommendedListStyle.css";
 import React, { useState, useEffect } from "react";
 import RecommendedMov from "./RecommendedMov";
 
@@ -6,31 +7,29 @@ function RecommendedList(props) {
   const BASE_URL = "https://hub.dummyapis.com/vj/wzGUkpZ#";
   const [recommended, setRecommended] = useState([{}]);
 
-  useEffect(async () => {
-    try {
-      const res = await axios.get(BASE_URL);
-      const [...movieData] = res.data;
-
-      movieData.forEach((feature) => {
-        setRecommended((prevMovies) => {
-          return [
-            ...prevMovies,
-            {
-              id: feature.id,
-              name: feature.name,
-              banner: feature.bannerUrl,
-              watched: feature.watched
-            }
-          ];
-        });
-      });
-    } catch (e) {
-      // action if rejected if above fails
-      return alert(
-        "Error returning data from the server, check your connection"
-      );
-    }
+  useEffect(() => {
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
   }, []);
+
+  function handleRecoRequest() {
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    handleSuggestCall();
+    // The below is cited from https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page
+    window.scrollTo({
+      left: 0,
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  }
 
   const handleSuggestCall = async () => {
     try {
@@ -53,7 +52,7 @@ function RecommendedList(props) {
     } catch (e) {
       // action if rejected if above fails
       return alert(
-        "Error returning data from the server, check your connection"
+        "Error returning data from the server, check your internet connection"
       );
     }
   };
@@ -67,9 +66,8 @@ function RecommendedList(props) {
   }
 
   return (
-    <div>
-      <h2>Recommended List</h2>
-      <div>
+    <div className="content-container">
+      <div className="recoList">
         {recommended.map((mov, index) => {
           return (
             <RecommendedMov
@@ -84,7 +82,9 @@ function RecommendedList(props) {
           );
         })}
       </div>
-      <button onClick={handleSuggestCall}>See More Suggestions</button>
+      <button className="APICall" onClick={handleRecoRequest}>
+        Spin For More
+      </button>
     </div>
   );
 }
