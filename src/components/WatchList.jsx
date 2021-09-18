@@ -47,7 +47,9 @@ function WatchList(props) {
               banner={mov.banner}
               watched={mov.watched}
               review={mov.review}
+              posted={mov.posted}
               edit={props.edit}
+              post={props.post}
               toggleWatched={props.toggleWatched}
               deleteSingleMov={props.deleteSingleMov}
             />

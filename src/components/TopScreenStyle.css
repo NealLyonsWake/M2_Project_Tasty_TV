@@ -4,6 +4,7 @@ header {
 
   background-color: rgba(10, 17, 23);
   text-align: center;
+  z-index: 1;
 }
 
 .logo {

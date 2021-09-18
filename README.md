@@ -28,8 +28,30 @@
 
 12. Optional stretch goals to be considered, pending available time prior to project submission.
 
+## Work Progress: 18/09/2021
+
+13. Following a 1:1 with the Educator it was determined that the edit item deliverable would not be fully met. To counter this it was determined that a number of items should be implemented to give feedback to the user for editing and item and reviewing a movie. This has lead to the creation of a number of buttons that allow the user to post and edt their review, as well as the creation of review components that save the state of the user's posted review.
+
+14. The review and edit code was implemented and now the corresponding component stylesheets are all that is required to finish the review components.
+
 ## Final Project Submission:
 
-13. Project is ready for final submission.
+1. Project is ready for final submission.
 
-14. Coming soon....This will involve server deployment and completion of this README to cover the scope of the project README requirements.
+2. Coming soon....This will involve server deployment and completion of this README to cover the scope of the project README requirements.
+
+### SPA Overview:
+
+#### Recommended List and Card Components
+
+1. On initialisation the user is presented with the home screen, where the recommendation movie list component is displayed on load up. The recommended movie list state is contained and updated within the recommended movie list component.
+
+2. Axios was used to get the API response from the movie data API provided in the specification. The API populates the recommended movie list component where the state is updated.
+
+3. Within the recommended movie list component is the individual movie card child component which renders each movie suggestion returned from the API onto individual movie cards.
+
+4. Users will be able to add a movie to their watch list by clicking on the Add button displayed under each movie recommendation. This will update the recommended list state by filtering the movie that was just added to the watch list. This helps avoid the possibility of adding the same movie more than once to the watch list; however it is uncertain whether the API could return the same movie on future calls and then be added to the watch list again by the user. This is possibly an unsolved problem to think about in future iterations.
+
+#### Watch List and Card Components
+
+1. From adding a movie to the watch list the movie details are passed up to the parent container through props where the watch list state is updated with the movie details.

@@ -7,6 +7,7 @@ function WatchCard(props) {
   const banner = props.banner;
   const watched = props.watched;
   const review = props.review;
+  const posted = props.posted;
 
   if (props.banner !== undefined) {
     const handleToggle = () => {
@@ -20,6 +21,22 @@ function WatchCard(props) {
     function onEdit(e) {
       props.edit(id, e.target.value);
     }
+
+    function onPost() {
+      props.post(id, review, posted, title, banner);
+    }
+
+    const handlePosted = () => {
+      return posted;
+    };
+
+    const postedCheck = () => {
+      if (posted) {
+        return "Edit";
+      } else {
+        return "Post";
+      }
+    };
 
     return (
       <div className="watchCard">
@@ -42,8 +59,15 @@ function WatchCard(props) {
         </div>
         <div className="review">
           <label>
-            Write a review of the movie.
-            <textarea onChange={onEdit} value={review}></textarea>
+            Your Movie Review
+            <textarea
+              onChange={onEdit}
+              value={review}
+              disabled={handlePosted()}
+            ></textarea>
+            <button className="editButton" onClick={onPost}>
+              {postedCheck()}
+            </button>
           </label>
         </div>
       </div>

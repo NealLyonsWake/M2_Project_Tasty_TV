@@ -4,7 +4,7 @@
     "head head head" 30%
     "banner review review" 40%
     "banner buttons buttons" 30% /
-    30% 30% 30%;
+    40% 40% 20%;
   padding: 10px;
   margin: 2px 2px;
   text-align: left;
@@ -54,4 +54,17 @@
   font: 14px "Open Sans", "Segoe UI", "Tahoma";
   color: white;
   margin: 5px 10px;
+}
+
+.editButton {
+  position: relative;
+  left: 295px;
+  bottom: 40px;
+
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  font: 14px "Open Sans", "Segoe UI", "Tahoma";
+  color: white;
+  z-index: 0;
 }
