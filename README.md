@@ -2,7 +2,7 @@
 
 ## Available Website
 
-1. The website can be previewed [here.]()
+1. The website can be previewed [here.](https://neallyonswake.github.io/csb-g3sy0/)
 
 # Scope and Development Process
 

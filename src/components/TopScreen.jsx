@@ -21,7 +21,7 @@ function TopScreen() {
     if (heading === "Recommended for You") {
       return <RecommendedList addMov={onAdd} />;
     } else if (heading === "Watch List") {
-      // Call the wathc list
+      // Call the watch list
       return (
         <WatchList
           toWatch={watchList}
@@ -68,7 +68,7 @@ function TopScreen() {
     setWatchList(watchedMovies);
   };
 
-  // Managing watch list movies (delete all atched movies)
+  // Managing watch list movies (delete all watched movies)
   const removeWatched = () => {
     if (watchList.length === 0) {
       window.alert("No tasks to remove");

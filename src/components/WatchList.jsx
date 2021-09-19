@@ -3,12 +3,17 @@ import React from "react";
 import WatchCard from "./WatchCard";
 
 function WatchList(props) {
+  // Initialize the watchlist prop variable
   const watchCards = props.toWatch;
 
+  // Called when the user clicks on "remove watched" button.
+  // Invokes the parent function to filter out any returned true watched values.
   function removeWatched() {
     props.removeWatched();
   }
 
+  // Called when the user clicks on "remove all" button.
+  // Invokes the parent function to reset the state of watchlist back to default.
   function removeAll() {
     props.removeAll();
   }
