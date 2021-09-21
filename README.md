@@ -28,15 +28,15 @@
 
 9. Error handling and style implemented. Each component has a corresponding stylesheet.
 
-10. API call repeated to poplulate RecommendedList.jsx component to a suitable fill. This allows the user to see more movie recommendations on page load up and "Spin for More" button press.
+10. API call repeated to populate RecommendedList.jsx component to a suitable fill. This allows the user to see more movie recommendations on page load up and "Spin for More" button press.
 
-11. File structure organisation completed and directories approiately labelled.
+11. File structure organisation completed and directories appropriately labelled.
 
 12. Optional stretch goals to be considered, pending available time prior to project submission.
 
 ## Work Progress: 18/09/2021
 
-13. Following a 1:1 with the Educator it was determined that the edit item deliverable would not be fully met. To counter this it was determined that a number of items should be implemented to give feedback to the user for editing an item and reviewing a movie. This has lead to the creation of a number of buttons that allow the user to post and edt their review, as well as the creation of review components that save the state of the user's posted review.
+13. Following a 1:1 with the Educator it was determined that the edit item deliverable would not be fully met. To counter this, it was determined that a number of items should be implemented to give feedback to the user for editing an item and reviewing a movie. This has led to the creation of a number of buttons that allow the user to post and edit their review, as well as the creation of review components that save the state of the user's posted review.
 
 14. The review and edit code was implemented and now the corresponding component stylesheets are all that is required to finish the review components.
 
@@ -56,13 +56,13 @@
 
 3. Within the recommended movie list component is the individual movie card child component which renders each movie suggestion returned from the API onto individual movie cards.
 
-4. Users will be able to add a movie to their watch list by clicking on the Add button displayed under each movie recommendation. This will update the recommended list state by filtering the movie that was just added to the watch list. This helps avoid the possibility of adding the same movie more than once to the watch list; however it is uncertain whether the API could return the same movie on future calls and then be added to the watch list again by the user. This is possibly an unsolved problem to think about in future iterations.
+4. Users will be able to add a movie to their watch list by clicking on the Add button displayed under each movie recommendation. This will update the recommended list state by filtering the movie that was just added to the watch list. This helps avoid the possibility of adding the same movie more than once to the watch list; however, it is uncertain whether the API could return the same movie on future calls and then be added to the watch list again by the user. This is possibly an unsolved problem to think about in future iterations.
 
 ## Watch List and Card Components
 
 1. From adding a movie to the watch list the movie details are passed up to the parent container through props where the watch list state is updated with the movie details.
 
-2. The user can then see the details of the movie they have just added to their watch list, including id, title, banner, and whether the movie has been watched or reviewed already; by default the movie would be unwatched and unreviewed on adding it to the watch list.
+2. The user can then see the details of the movie they have just added to their watch list, including id, title, banner, and whether the movie has been watched or reviewed already; by default, the movie would be unwatched and unreviewed on adding it to the watch list.
 
 3. The watch list calls the individual watch card components to be rendered within the list where the user can see and process a number of actions:
 

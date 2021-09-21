@@ -31,7 +31,6 @@ function RecommendedList(props) {
     // The below is cited from https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page
     // Smooth scroll to the bottom of the page.
     window.scrollTo({
-      left: 0,
       top: document.body.scrollHeight,
       behavior: "smooth"
     });
